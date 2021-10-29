@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import logo from '../../../logos/Logo.png';
 import './NavigationBar.css';
 import { NavDropdown } from 'react-bootstrap';
@@ -62,11 +62,10 @@ const NavigationBar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
                         <Nav.Link href="" onClick={() => history.push('/')}>Home</Nav.Link>
-                        <Nav.Link href="" >About</Nav.Link>
+                        {/* <Nav.Link href="" >About</Nav.Link> */}
                         <Nav.Link href="" >Service</Nav.Link>
-                        <Nav.Link href="" >Concerns</Nav.Link>
-                        <Nav.Link href="" >Event</Nav.Link>
-                        <Nav.Link href="" >Contact</Nav.Link>
+                        <Nav.Link   as={NavLink} to="/myOrders" href="" >My Orders</Nav.Link>
+                        <Nav.Link as={NavLink} to="/manageBooking" href="" >Manage All Orders</Nav.Link>
                     </Nav>
                     {buttons}
                 </Navbar.Collapse>

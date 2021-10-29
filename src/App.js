@@ -35,8 +35,14 @@ function App() {
             <PrivateRoute path="/apartmentDetail/:id">
               <ApartmentDetail />
             </PrivateRoute>
+            <PrivateRoute path="/myOrders">
+            <MyRent></MyRent>
+            </PrivateRoute>
+            <PrivateRoute path="/manageBooking">
+            <Bookings />
+            </PrivateRoute>
             <Route path="/bookings">
-              <Bookings />
+            <Bookings />
             </Route>
             <Route path="/addHouse">
               <AddHouse />
