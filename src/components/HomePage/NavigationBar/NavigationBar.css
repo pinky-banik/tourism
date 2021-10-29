@@ -1,0 +1,9 @@
+.navbar-nav .nav-link {
+  margin-right: 10px;
+  font-size: large;
+  font-weight: 500;
+  color: black;
+}
+.btn {
+  font-size: large;
+}
