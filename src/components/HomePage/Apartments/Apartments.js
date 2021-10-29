@@ -4,7 +4,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBath, faBed, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-
+import loading from "../../../logos/loading.gif";
 const Apartments = () => {
     const [apartmentData, setApartmentData] = useState([]);
     useEffect(() => {
@@ -17,6 +17,13 @@ const Apartments = () => {
         <Container>
             <h5 className="greenText text-center mt-5">House Rent</h5>
             <h2 className="darkGreenText text-center font-weight-bold">Discover the largest Rent <br /> available today</h2>
+            
+            {
+                (apartmentData.length === 0) ?
+                    <div class="d-flex justify-content-center">
+                        <img style={{width: '200px', height: '150px', marginTop: '50px'}} src={loading} alt="loading"/> 
+                    </div> :
+            <div>
             <Row className="mt-5">
                 {
                     apartmentData.map(data =>
@@ -48,6 +55,8 @@ const Apartments = () => {
                     )
                 }
             </Row>
+            </div>
+            }
         </Container>
     );
 };

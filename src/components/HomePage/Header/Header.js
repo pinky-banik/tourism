@@ -39,20 +39,6 @@ const Header = () => {
                 </div>
                 </Container>
             </div>
-
-            <div 
-                id="feature"
-                className="py-5" style={{backgroundColor:"#2B3856"}}
-            >
-                {/* <div className="text-center text-white">
-                    <h1>Our Feature services</h1>
-
-                    <p className="mb-0">
-                    Here you can find our all latest services. Choose some of them and
-                    find your best treatment Online.
-                    </p>
-                </div> */}
-                </div>
         </div>
     );
 };
