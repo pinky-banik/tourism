@@ -1,10 +1,10 @@
-import apartmentImg from '../images/apartment2.png';
+import "apartmentImg" from '../images/apartment2.png';
 
 const apartmentData = [
     {
         title: "Family Apartment Three",
         place: "Nasirabad H/S, Chattogram",
-        img: apartmentImg,
+        img: "apartmentImg",
         ablility: [ "3 Bedroom", "3 Bathroom" ],
         price: 356,
         details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
@@ -14,7 +14,7 @@ const apartmentData = [
     {
         title: "Couple Apartment",
         place: "Nasirabad H/S, Chattogram",
-        img: apartmentImg,
+        img: "apartmentImg",
         ablility: [ "2 Bedroom", "2 Bathroom" ],
         price: 556,
         details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
@@ -24,7 +24,7 @@ const apartmentData = [
     {
         title: "Family Apartment Three",
         place: "Nasirabad H/S, Chattogram",
-        img: apartmentImg,
+        img: "apartmentImg",
         ablility: [ "3 Bedroom", "3 Bathroom" ],
         price: 356,
         details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
@@ -34,7 +34,7 @@ const apartmentData = [
     {
         title: "Family Apartment Three",
         place: "Nasirabad H/S, Chattogram",
-        img: apartmentImg,
+        img: "apartmentImg",
         ablility: [ "3 Bedroom", "3 Bathroom" ],
         price: 356,
         details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
@@ -44,7 +44,7 @@ const apartmentData = [
     {
         title: "Family Apartment Three",
         place: "Nasirabad H/S, Chattogram",
-        img: apartmentImg,
+        img: "apartmentImg",
         ablility: [ "3 Bedroom", "3 Bathroom" ],
         price: 356,
         details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",
@@ -54,7 +54,7 @@ const apartmentData = [
     {
         title: "Family Apartment Three",
         place: "Nasirabad H/S, Chattogram",
-        img: apartmentImg,
+        img: "apartmentImg",
         ablility: [ "3 Bedroom", "3 Bathroom" ],
         price: 356,
         details: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aperiam ea soluta architecto doloremque iste.",

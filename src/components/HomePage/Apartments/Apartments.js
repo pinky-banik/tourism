@@ -8,7 +8,7 @@ import loading from "../../../logos/loading.gif";
 const Apartments = () => {
     const [apartmentData, setApartmentData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/bookings')
             .then(res => res.json())
             .then(data => setApartmentData(data))
     }, []);
