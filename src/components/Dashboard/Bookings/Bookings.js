@@ -11,16 +11,16 @@ const Bookings = () => {
     const [loggedInUser] = useContext(UserContext);
     const [bookingInfo, setBookingInfo] = useState([]);
     useEffect(() => {
-        fetch('https://afternoon-atoll-75607.herokuapp.com/allBookings')
+        fetch('http://localhost:5000/allBookings')
             .then(res => res.json())
             .then(data => setBookingInfo(data))
     }, []);
 
-    const statuses = ['Pending', 'Booked', 'Check-In', 'Checked-Out'];
+    const statuses = ['Pending', 'Confirmed'];
     const statusChange = (id, e) => {
         const updatedBookingInfo = { status: e.target.value };
 
-        fetch(`https://afternoon-atoll-75607.herokuapp.com/update/${id}`, {
+        fetch(`http://localhost:5000/update/${id}`, {
             method: 'PATCH',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedBookingInfo)

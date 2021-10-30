@@ -11,7 +11,7 @@ const MyRent = () => {
     const [loggedInUser] = useContext(UserContext);
     const [myRents, setMyRents] = useState([]);
     useEffect(() => {
-        fetch(`https://afternoon-atoll-75607.herokuapp.com/bookings?email=${loggedInUser.email}`)
+        fetch(`http://localhost:5000/bookings?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => setMyRents(data))
     }, [loggedInUser.email]);
@@ -52,7 +52,7 @@ const MyRent = () => {
                                             <tr key={rent._id}>
                                                 <td style={{ width: '40%' }} className="pl-3 pt-3">{rent.house}</td>
                                                 <td style={{ width: '30%' }} className="pl-3 pt-3 text-center">${rent.price}</td>
-                                                <td style={{ width: '30%' }} className="pl-3 text-center"><button className="btn greenBtn mt-2 btn-sm">remove</button></td>
+                                                <td style={{ width: '30%' }} className="pl-3 text-center"><button className="btn greenBtn mt-2 btn-sm">{rent.status}</button></td>
                                             </tr>
                                         )
                                     }

@@ -8,7 +8,7 @@ import loading from "../../../logos/loading.gif";
 const Apartments = () => {
     const [apartmentData, setApartmentData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/bookings')
+        fetch('http://localhost:5000/apartments')
             .then(res => res.json())
             .then(data => setApartmentData(data))
     }, []);
@@ -38,12 +38,12 @@ const Apartments = () => {
                                             <Card.Text className="text-secondary"><FontAwesomeIcon icon={faBed} /> {data.bedroom} Bedrooms</Card.Text>
                                         </Col>
                                         <Col className="text-right">
-                                            <Card.Text className="text-secondary"><FontAwesomeIcon icon={faBath} /> {data.ratingCount} Bathrooms</Card.Text>
+                                            <Card.Text className="text-secondary"><FontAwesomeIcon icon={faBath} /> {data.bathroom} Bathrooms</Card.Text>
                                         </Col>
                                     </Row>
                                     <Row className="mt-4">
                                         <Col>
-                                            <h2 className="font-weight-bold greenText">${data.rating}</h2>
+                                            <h2 className="font-weight-bold greenText">${data.price}</h2>
                                         </Col>
                                         <Col className="text-right">
                                             <button onClick={() => history.push(`/apartmentDetail/${data._id}`)} className="btn greenBtn">View Details</button>

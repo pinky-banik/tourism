@@ -15,7 +15,7 @@ const ApartmentDetail = () => {
 
     const [apartmentData, setApartmentData] = useState([]);
     useEffect(() => {
-        fetch('')
+        fetch('http://localhost:5000/apartments')
             .then(res => res.json())
             .then(data => setApartmentData(data))
     }, []);
@@ -42,7 +42,7 @@ const ApartmentDetail = () => {
         formData.append('price', apartment.price);
         formData.append('status', bookingInfo.status);
 
-        fetch('https://afternoon-atoll-75607.herokuapp.com/addBooking', {
+        fetch('http://localhost:5000/addBooking', {
             method: 'POST',
             body: formData
         })

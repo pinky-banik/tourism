@@ -33,7 +33,7 @@ const AddHouse = () => {
         formData.append('bedroom', addApartment.bedroom);
         formData.append('bathroom', addApartment.bathroom);
 
-        fetch('https://afternoon-atoll-75607.herokuapp.com/addNewApartment', {
+        fetch('localhost:5000/addNewApartment', {
             method: 'POST',
             body: formData
         })
