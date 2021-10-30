@@ -15,7 +15,7 @@ const ApartmentDetail = () => {
 
     const [apartmentData, setApartmentData] = useState([]);
     useEffect(() => {
-        fetch('https://afternoon-atoll-75607.herokuapp.com/apartments')
+        fetch('')
             .then(res => res.json())
             .then(data => setApartmentData(data))
     }, []);
