@@ -41,7 +41,7 @@ const Bookings = () => {
                         </div>
                         <div className="mt-5">
                             <p><Link className="link" to="bookings"><span className="booking-link"><FontAwesomeIcon icon={faNotesMedical} size="xs" /> Booking list</span></Link></p>
-                            <p><Link className="link" to="AddSpot"><span><FontAwesomeIcon icon={faPlus} size="xs" /> Add Orders House</span></Link></p>
+                            <p><Link className="link" to="AddSpot"><span><FontAwesomeIcon icon={faPlus} size="xs" /> Add Orders Spot</span></Link></p>
                             <p><Link className="link" to="myOrders"><span><FontAwesomeIcon icon={faHome} size="xs" /> My Orders</span></Link></p>
                             <p className="goHome"><Link className="link" to="/"><span><FontAwesomeIcon icon={faHome} size="xs" /> Back to Home</span></Link></p>
                         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import Bg from "../../../images/backgroungImage.png";
+import Bg from "../../../images/background.jpg";
 import { Container } from 'react-bootstrap';
 import './Header.css';
 

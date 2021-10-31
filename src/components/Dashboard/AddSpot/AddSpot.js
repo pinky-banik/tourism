@@ -29,9 +29,9 @@ const AddSpot = () => {
         formData.append('file', file);
         formData.append('title', addSpot.title);
         formData.append('price', addSpot.price);
-        formData.append('location', addSpot.location);
-        formData.append('bedroom', addSpot.bedroom);
-        formData.append('bathroom', addSpot.bathroom);
+        formData.append('places', addSpot.places);
+        formData.append('rating', addSpot.rating);
+        formData.append('duration', addSpot.duration);
 
         fetch('localhost:5000/addNewSpot', {
             method: 'POST',
@@ -53,11 +53,11 @@ const AddSpot = () => {
                 <div className="col-md-2 col-sm-12">
                     <div className="sidebar">
                         <div className="logo">
-                            <Link to="/"><img src={logo} alt="logo" /></Link>
+                            <Link to="/"><img  className="w-50" src={logo} alt="logo" /></Link>
                         </div>
                         <div className="dashboard__link mt-5">
                             <p><Link className="link" to="bookings"><span><FontAwesomeIcon icon={faNotesMedical} size="xs" /> Booking list</span></Link></p>
-                            <p><Link className="link" to="AddSpot"><span className="booking-link"><FontAwesomeIcon icon={faPlus} size="xs" /> Add Orders House</span></Link></p>
+                            <p><Link className="link" to="AddSpot"><span className="booking-link"><FontAwesomeIcon icon={faPlus} size="xs" /> Add Orders Spot</span></Link></p>
                             <p><Link className="link" to="myOrders"><span><FontAwesomeIcon icon={faHome} size="xs" /> My Orders</span></Link></p>
                             <p className="goHome"><Link className="link" to="/"><span><FontAwesomeIcon icon={faHome} size="xs" /> Back to Home</span></Link></p>
                         </div>
@@ -65,7 +65,7 @@ const AddSpot = () => {
                 </div>
                 <div className="col-md-10 col-sm-12">
                     <div className="sec__title d-flex">
-                        <h3 className="pl-3">Add Orders House</h3>
+                        <h3 className="pl-3">Add Orders Spot</h3>
                         <h5 className="ml-auto user__name">{loggedInUser.name}</h5>
                     </div>
                     <div className="dashboard__content">

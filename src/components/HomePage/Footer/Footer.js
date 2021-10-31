@@ -1,63 +1,59 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDribbble, faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import "./footer.css";
 
 const Footer = () => {
     return (
-        <div style={{ backgroundColor: "indigo", color: "white" }}>
-            <Container className="py-5">
-                <Row>
-                    <Col sm={5}>
-                        <Row className="pt-4">
-                            <Col sm={1}>
-                                <FontAwesomeIcon size="lg" icon={faMapMarkerAlt} />
-                            </Col>
-                            <Col>
-                                <h6 >
-                                    H#340 (4th Floor), Road #24, <br />
-                                    New DOHS, Mohakhali, Dhaka, Bangladesh <br />
-                                    Phone: 018XXXXXXXX <br />
-                                    E-mail: info@company.com
-                                </h6>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col sm={7}>
-                        <Row>
-                            <Col>
-                                <h4 className="mb-4">Company</h4>
-                                <span>About</span> <br />
-                                <span>Site Map</span> <br />
-                                <span>Support Center</span> <br />
-                                <span>Terms Comditions</span> <br />
-                                <span>Submit Listing</span>
-                            </Col>
-                            <Col>
-                                <h4 className="mb-4">Quick Links</h4>
-                                <span>Quick Links</span> <br />
-                                <span>Ordersals</span> <br />
-                                <span>Sales</span> <br />
-                                <span>Contact</span> <br />
-                                <span>Terms Conditons</span> <br />
-                                <span>Our Blogs</span>
-                            </Col>
-                            <Col>
-                                <h4 className="mb-4">About Us</h4>
-                                <span>We are the top real estate agency in Sydney, with agents available to answer any question 24/7.</span>
-                                <p className="mt-3">
-                                    <FontAwesomeIcon className="mr-4" size="lg" icon={faFacebook} />
-                                    <FontAwesomeIcon className="mr-4" size="lg" icon={faInstagram} />
-                                    <FontAwesomeIcon className="mr-4" size="lg" icon={faLinkedin} />
-                                    <FontAwesomeIcon size="lg" icon={faYoutube} />
-                                </p>
-
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
+        <div>
+                <div className="site-footer">
+                    {/* ==========footer container============== */}
+                    <div className="container">
+                        <footer>
+                        <div className="row">
+                        <div className="col-sm-12 col-md-6">
+                            <h6>About</h6>
+                            <p className="text-justify">"Music Notes" courses about learning every musical instrument at a reasonable price. With these sites, you’ll have a great head start.</p>
+                        </div>
+                        <div className="col-xs-6 col-md-3">
+                            <h6>Service</h6>
+                            <ul className="footer-links">
+                            <li><a href="/service">switzerland</a></li>
+                            <li><a href="/service">Japan</a></li>
+                            <li><a href="/service">korea</a></li>
+                            <li><a href="/service">Thailand</a></li>
+                            <li><a href="/service">Violin</a></li>
+                            </ul>
+                        </div>
+                        <div className="col-xs-6 col-md-3">
+                            <h6>Quick Links</h6>
+                            <ul className="footer-links">
+                            <li><a href="/">About Us</a></li>
+                            <li><a href="/">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <hr/>
+                    <div className="container mx-5">
+                        <div className="row">
+                        <div className="col-md-7 col-sm-6 col-xs-12">
+                            <p className="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+                        <a href="/home"> Pinky Banik</a>.
+                            </p>
+                        </div>
+                        <div className="col-md-4 col-sm-6 col-xs-12n">
+                            <ul className="social-icons">
+                            <li><a className="facebook" href="#home"> <FontAwesomeIcon icon={faFacebook} /></a></li>
+                            <li><a className="twitter" href="#facebook"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                            <li><a className="dribbble" href="#dribble"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                            <li><a className="linkedin" href="#linkedin"><FontAwesomeIcon icon={faDribbble} /></a></li>   
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </footer>
+                </div>
+                </div>
         </div>
     );
 };

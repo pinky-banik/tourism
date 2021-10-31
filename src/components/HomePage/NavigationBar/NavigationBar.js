@@ -20,7 +20,7 @@ const NavigationBar = () => {
 
     let buttons;
 
-    const handleSignOut = () => {
+     const handleSignOut = () => {
         firebase.auth().signOut()
         .then(res => {
             const signOutUser = {
@@ -32,7 +32,15 @@ const NavigationBar = () => {
             setLoggedInUser(signOutUser);
           }).catch(function(error) {
             // An error happened.
-          });
+          })
+          .then(data => {
+            if (data) {
+                window.alert("logged out succesfully.")
+            } else {
+                window.alert("logged out succesfully.")
+            }
+
+        })
     }
 
     if(loggedInUser.email){
@@ -57,7 +65,7 @@ const NavigationBar = () => {
     return (
         <Container>
             <Navbar className="" collapseOnSelect expand="md" >
-                <Navbar.Brand href=""><img style={{height:"60px"}} src={logo} alt=""/></Navbar.Brand>
+                <Navbar.Brand href=""><img  className ="w-50"style={{height:"60px"}} src={logo} alt=""/><span>Infinite Tourism</span></Navbar.Brand>
                 <Navbar.Toggle className="ml-auto" aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">

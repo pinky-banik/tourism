@@ -15,8 +15,8 @@ const Spots = () => {
     const history = useHistory();
     return (
         <Container>
-            <h5 className="indigoText text-center mt-5">House Orders</h5>
-            <h2 className="darkIndigoText text-center font-weight-bold">Discover the largest Orders <br /> available today</h2>
+            <h5 className="indigoText text-center mt-5 ">Book Your Favourite Package</h5>
+            <h2 className="darkIndigoText text-center font-weight-bold">Discover the best tourist package <br /> available today</h2>
             
             {
                 (spotData.length === 0) ?
@@ -32,10 +32,10 @@ const Spots = () => {
                                 <Card.Img src={data.img} alt="image" />
                                 <Card.Body>
                                     <Card.Title className="font-weight-bold indigoText ">{data.title}</Card.Title>
-                                    <Card.Text className="text-secondary"><FontAwesomeIcon icon={faMapMarkerAlt} /> {data.location}</Card.Text>
+                                    <Card.Text className="text-secondary"><FontAwesomeIcon icon={faMapMarkerAlt} /> {data.places}</Card.Text>
                                     <Row>
                                         <Col>
-                                            <Card.Text className="text-secondary"><FontAwesomeIcon icon={faBed} /> {data.bedroom} Bedrooms</Card.Text>
+                                            <Card.Text className="text-secondary"><FontAwesomeIcon icon={faBed} /> {data.duration} Bedrooms</Card.Text>
                                         </Col>
                                         <Col className="text-right">
                                             <Card.Text className="text-secondary"><FontAwesomeIcon icon={faBath} /> {data.bathroom} Bathrooms</Card.Text>
