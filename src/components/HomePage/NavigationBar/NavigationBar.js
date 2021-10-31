@@ -49,7 +49,7 @@ const NavigationBar = () => {
         buttons = (
             <ul className="navbar-nav menuBtn">
                 <li className="nav-item">
-                    <button onClick={() => history.push('/login')} className="btn greenBtn" >Login</button>
+                    <button onClick={() => history.push('/login')} className="btn indigoBtn" >Login</button>
                 </li>
             </ul>
         )

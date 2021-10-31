@@ -6,7 +6,7 @@ import { faFacebook, faInstagram, faLinkedin, faYoutube } from '@fortawesome/fre
 
 const Footer = () => {
     return (
-        <div style={{ backgroundColor: "#275A53", color: "white" }}>
+        <div style={{ backgroundColor: "indigo", color: "white" }}>
             <Container className="py-5">
                 <Row>
                     <Col sm={5}>

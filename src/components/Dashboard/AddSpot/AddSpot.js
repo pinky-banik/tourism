@@ -101,7 +101,7 @@ const AddSpot = () => {
                                 </Col>
                             </Row>
                             <div className="text-right mt-3 mr-1">
-                                <button type="submit" onClick={handleAddedData} className="btn greenBtn">Submit</button>
+                                <button type="submit" onClick={handleAddedData} className="btn indigoBtn">Submit</button>
                             </div>
                         </Form>
                     </div>

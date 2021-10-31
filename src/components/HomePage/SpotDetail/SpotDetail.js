@@ -79,21 +79,21 @@ const SpotDetail = () => {
                         </div>
                         <Row className="my-3">
                             <Col>
-                                <h2 className="font-weight-bold darkGreenText">{spot.title}</h2>
+                                <h2 className="font-weight-bold darkIndigoText">{spot.title}</h2>
                             </Col>
                             <Col>
-                                <h2 className="font-weight-bold greenText text-right">${spot.price}</h2>
+                                <h2 className="font-weight-bold indigoText text-right">${spot.price}</h2>
                             </Col>
                         </Row>
                         <p className="text-secondary">3000 sq-ft., {spot.bedroom} Bedroom, Semi-furnished, Luxurious, South facing Spot for Orders in Rangs Malancha, Melbourne.</p>
-                        <h3 className="font-weight-bold darkGreenText">Price Detail -</h3>
+                        <h3 className="font-weight-bold darkIndigoText">Price Detail -</h3>
                         <p className="text-secondary">
                             Orders/Month: $550 (negotiable) <br />
                             Service Charge : 8,000/= Tk per month, subject to change <br />
-                            Security Deposit : 3 month’s rent <br />
+                            Security Deposit : 3 month’s orders <br />
                             Flat Release Policy : 3 months earlier notice required
                         </p>
-                        <h3 className="font-weight-bold darkGreenText">Property Detail -</h3>
+                        <h3 className="font-weight-bold darkIndigoText">Property Detail -</h3>
                         <p className="text-secondary">Address & Area : Rangs Malancha, House-68, Road-6A (Dead End Road), Dhanmondi Residential Area.</p>
                         <p className="text-secondary">Floor :  A5 (5th Floor) (6 storied Building ) (South Facing Unit)</p>
                         <p className="text-secondary">Flat Size : 3000 Sq Feet.</p>
@@ -116,7 +116,7 @@ const SpotDetail = () => {
                                 <Form.Group>
                                     <Form.Control onBlur={handleBlur} size="lg" as="textarea" name="message" rows={3} type="text" placeholder="Message" required />
                                 </Form.Group>
-                                <button  type="submit" size="lg" className="btn greenBtn form-control">Request Booking</button>
+                                <button  type="submit" size="lg" className="btn indigoBtn form-control">Request Booking</button>
                             </Form>
                         </div>
                     </Col>

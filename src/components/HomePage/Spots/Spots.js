@@ -15,8 +15,8 @@ const Spots = () => {
     const history = useHistory();
     return (
         <Container>
-            <h5 className="greenText text-center mt-5">House Orders</h5>
-            <h2 className="darkGreenText text-center font-weight-bold">Discover the largest Orders <br /> available today</h2>
+            <h5 className="indigoText text-center mt-5">House Orders</h5>
+            <h2 className="darkIndigoText text-center font-weight-bold">Discover the largest Orders <br /> available today</h2>
             
             {
                 (spotData.length === 0) ?
@@ -31,7 +31,7 @@ const Spots = () => {
                             <Card className="bg-white mb-4 card-style">
                                 <Card.Img src={data.img} alt="image" />
                                 <Card.Body>
-                                    <Card.Title className="font-weight-bold greenText ">{data.title}</Card.Title>
+                                    <Card.Title className="font-weight-bold indigoText ">{data.title}</Card.Title>
                                     <Card.Text className="text-secondary"><FontAwesomeIcon icon={faMapMarkerAlt} /> {data.location}</Card.Text>
                                     <Row>
                                         <Col>
@@ -43,10 +43,10 @@ const Spots = () => {
                                     </Row>
                                     <Row className="mt-4">
                                         <Col>
-                                            <h2 className="font-weight-bold greenText">${data.price}</h2>
+                                            <h2 className="font-weight-bold indigoText">${data.price}</h2>
                                         </Col>
                                         <Col className="text-right">
-                                            <button onClick={() => history.push(`/spotDetail/${data._id}`)} className="btn greenBtn">View Details</button>
+                                            <button onClick={() => history.push(`/spotDetail/${data._id}`)} className="btn indigoBtn">View Details</button>
                                         </Col>
                                     </Row>
                                 </Card.Body>

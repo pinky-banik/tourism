@@ -31,21 +31,21 @@
     top: 0;
     z-index: -2221;
 }
-.greenBtn{
+.indigoBtn{
     color: white;
-    background-color:#275A53;
-    border-color:#275A53;
+    background-color:indigo;
+    border-color:indigo;
 }
-.greenBtn:hover{
+.indigoBtn:hover{
     color: white;
-    background-color: #1e4640;
-    border-color: #1e4640;
+    background-color: rgb(45, 1, 77);
+    border-color: rgb(45, 1, 77);
 }
-.greenBtn:active{
+.indigoBtn:active{
     color: white;
-    background-color: #1e4640;
-    border-color: #1e4640;
+    background-color: rgb(45, 1, 77);
+    border-color: rgb(45, 1, 77);
 }
-.greenBtn:focus{
-    box-shadow: 0 0 0 3px rgb(39, 90, 83, 0.25);
+.indigoBtn:focus{
+    box-shadow: 0 0 0 3px rgba(47, 39, 90, 0.25);
 }

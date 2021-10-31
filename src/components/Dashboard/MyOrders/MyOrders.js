@@ -43,16 +43,16 @@ const MyOrders = () => {
                                     <tr className="tableRow">
                                         <th style={{ width: '40%' }} className="pl-3">House Name</th>
                                         <th style={{ width: '30%' }} className="pl-3 text-center">Price</th>
-                                        <th style={{ width: '30%' }} className="pl-3 text-center">Action</th>
+                                        <th style={{ width: '30%' }} className="pl-3 text-center">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
-                                        myOrderss.map(rent =>
-                                            <tr key={rent._id}>
-                                                <td style={{ width: '40%' }} className="pl-3 pt-3">{rent.house}</td>
-                                                <td style={{ width: '30%' }} className="pl-3 pt-3 text-center">${rent.price}</td>
-                                                <td style={{ width: '30%' }} className="pl-3 text-center"><button className="btn greenBtn mt-2 btn-sm">{rent.status}</button></td>
+                                        myOrderss.map(orders =>
+                                            <tr key={orders._id}>
+                                                <td style={{ width: '40%' }} className="pl-3 pt-3">{orders.house}</td>
+                                                <td style={{ width: '30%' }} className="pl-3 pt-3 text-center">${orders.price}</td>
+                                                <td style={{ width: '30%' }} className="pl-3 text-center"><button className="btn indigoBtn mt-2 btn-sm">{orders.status}</button></td>
                                             </tr>
                                         )
                                     }

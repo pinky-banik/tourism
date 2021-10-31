@@ -95,7 +95,7 @@ const Login = () => {
                                 <Form.Control required name="confirmPassword" type="password" placeholder="Confirm Password" />
                             </Form.Group>
                         }
-                        <button type="submit" className="btn greenBtn form-control">
+                        <button type="submit" className="btn indigoBtn form-control">
                             {
                                 newUser ? <span>Create an acount</span>
                                     : <span>Login</span>
@@ -107,7 +107,7 @@ const Login = () => {
                                 newUser ? <small>Already have an acount? </small>
                                     : <small>Don't have an acount? </small>
                             }
-                            <Link onClick={() => { setNewUser(!newUser); setUser({ error: '' }) }} className="greenText">
+                            <Link onClick={() => { setNewUser(!newUser); setUser({ error: '' }) }} className="indigoText">
                                 {
                                     !newUser ? <span>Create an acount</span>
                                         : <span>Login</span>
