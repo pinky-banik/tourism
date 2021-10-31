@@ -25,8 +25,8 @@ const MyRent = () => {
                         </div>
                         <div className="dashboard__link mt-5">
                             <p><Link className="link" to="bookings"><span><FontAwesomeIcon icon={faNotesMedical} size="xs" /> Booking list</span></Link></p>
-                            <p><Link className="link" to="addSpot"><span><FontAwesomeIcon icon={faPlus} size="xs" /> Add  Order House</span></Link></p>
-                            <p><Link className="link" to="myOrder"><span className="booking-link"><FontAwesomeIcon icon={faHome} size="xs" /> My  Order</span></Link></p>
+                            <p><Link className="link" to="addSpot"><span><FontAwesomeIcon icon={faPlus} size="xs" /> Add  Tourist Spot</span></Link></p>
+                            <p><Link className="link" to="myOrders"><span className="booking-link"><FontAwesomeIcon icon={faHome} size="xs" /> My  Orders</span></Link></p>
                             <p className="goHome"><Link className="link" to="/"><span><FontAwesomeIcon icon={faHome} size="xs" /> Back to Home</span></Link></p>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ const MyRent = () => {
                             <Table borderless size="sm">
                                 <thead className="mt-3">
                                     <tr className="tableRow">
-                                        <th style={{ width: '40%' }} className="pl-3">House Name</th>
+                                        <th style={{ width: '40%' }} className="pl-3"> Name</th>
                                         <th style={{ width: '30%' }} className="pl-3 text-center">Price</th>
                                         <th style={{ width: '30%' }} className="pl-3 text-center">Action</th>
                                     </tr>
@@ -50,8 +50,8 @@ const MyRent = () => {
                                     {
                                         myRents.map(order =>
                                             <tr key={order._id}>
-                                                <td style={{ width: '40%' }} className="pl-3 pt-3">{order.house}</td>
-                                                <td style={{ width: '30%' }} className="pl-3 pt-3 text-center">${order.price}</td>
+                                                <td style={{ width: '40%' }} className="pl-3 pt-3">{order.spot}</td>
+                                                <td style={{ width: '30%' }} className="pl-3 pt-3 text-center">{order.price}</td>
                                                 <td style={{ width: '30%' }} className="pl-3 text-center"><button className="btn greenBtn mt-2 btn-sm">{order.status}</button></td>
                                             </tr>
                                         )

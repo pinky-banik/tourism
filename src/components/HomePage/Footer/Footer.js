@@ -13,7 +13,7 @@ const Footer = () => {
                         <div className="row">
                         <div className="col-sm-12 col-md-6">
                             <h6>About</h6>
-                            <p className="text-justify">"Music Notes" courses about learning every musical instrument at a reasonable price. With these sites, you’ll have a great head start.</p>
+                            <p className="text-justify">It’s more than a vacation, it’s an adventure. Life-enriching, relaxing and unique - plan a tour and enjoy the ultimate holiday experience with us. Discover unforgettable destinations as you travel in total comfort and style.</p>
                         </div>
                         <div className="col-xs-6 col-md-3">
                             <h6>Service</h6>
@@ -22,7 +22,7 @@ const Footer = () => {
                             <li><a href="/service">Japan</a></li>
                             <li><a href="/service">korea</a></li>
                             <li><a href="/service">Thailand</a></li>
-                            <li><a href="/service">Violin</a></li>
+                            <li><a href="/service">Nepal</a></li>
                             </ul>
                         </div>
                         <div className="col-xs-6 col-md-3">
@@ -36,8 +36,8 @@ const Footer = () => {
                     <div className="container mx-5">
                         <div className="row">
                         <div className="col-md-7 col-sm-6 col-xs-12">
-                            <p className="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
-                        <a href="/home"> Pinky Banik</a>.
+                            <p className="copyright-text">Copyright &copy; 2021 All Rights Reserved by  
+                        <a href="/home"> Infinite Tourism </a>
                             </p>
                         </div>
                         <div className="col-md-4 col-sm-6 col-xs-12n">

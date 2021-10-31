@@ -23,17 +23,17 @@ const Header = () => {
                 >
                     <div className="text-center my-5 py-5">
                         <div>
-                        <h1 className="fw-bold" style={{color:"indigo"}}>Welcome to Medicare Home</h1>
-                        <p className="my-4  fs-5">
-                        "Medicare Home" has provided the best in health care and the latest in medical technology to the people.
+                        <h1 className="fw-bold" style={{color:"indigo"}}>Welcome to Infinite Tourism</h1>
+                        <p className="my-4  fs-5 text-danger fw-bold">
+                        “A journey of a thousand miles begins with a single step” – Lao Tzu
                         </p>
                         </div>
 
                         <NavLink
-                        to="/services"
+                        to="/contact"
                         className="rounded-pill btn btn-primary fs-5 py-2 px-4" style={{backgroundColor:"indigo"}}
                         >
-                        View services
+                        Book Your Favourite Spot
                         </NavLink>
                     </div>
                 </div>
