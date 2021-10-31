@@ -7,13 +7,13 @@ import { faPlus, faHome, faNotesMedical } from '@fortawesome/free-solid-svg-icon
 import { UserContext } from '../../../App';
 
 
-const MyRent = () => {
+const MyOrder = () => {
     const [loggedInUser] = useContext(UserContext);
-    const [myRents, setMyRents] = useState([]);
+    const [myOrders, setMyOrders] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/bookings?email=${loggedInUser.email}`)
             .then(res => res.json())
-            .then(data => setMyRents(data))
+            .then(data => setMyOrders(data))
     }, [loggedInUser.email]);
     return (
         <div className="bookings">
@@ -48,7 +48,7 @@ const MyRent = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        myRents.map(order =>
+                                        myOrders.map(order =>
                                             <tr key={order._id}>
                                                 <td style={{ width: '40%' }} className="pl-3 pt-3">{order.spot}</td>
                                                 <td style={{ width: '30%' }} className="pl-3 pt-3 text-center">{order.price}</td>
@@ -66,4 +66,4 @@ const MyRent = () => {
     );
 };
 
-export default MyRent;
+export default MyOrder;

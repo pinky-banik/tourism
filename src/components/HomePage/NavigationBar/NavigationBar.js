@@ -63,8 +63,8 @@ const NavigationBar = () => {
         )
     }
     return (
-            <div className="navbar">
-                <Navbar className="mx-3 " variant="dark" collapseOnSelect expand="md" >
+            <div className="">
+                <Navbar className="px-5 " variant="dark" collapseOnSelect expand="md" >
                 <Navbar.Brand href=""><img  className ="w-50"style={{height:"60px"}} src={logo} alt=""/><span>Infinite Tourism</span></Navbar.Brand>
                 <Navbar.Toggle className="ml-auto" aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

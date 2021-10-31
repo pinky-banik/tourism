@@ -35,7 +35,7 @@ const SpotDetail = () => {
         formData.append('number', bookingInfo.number);
         formData.append('email', bookingInfo.email || loggedInUser.email);
         formData.append('message', bookingInfo.message);
-        formData.append('title', spot.title);
+        formData.append('spot', spot.title);
         formData.append('price', spot.price);
         formData.append('status', bookingInfo.status);
 
@@ -98,7 +98,7 @@ const SpotDetail = () => {
 Twin share tourist and first-class accommodation with private facilities, as specified.</p>
                         <p className="text-secondary"> # Cruises.</p>
                         <p className="text-secondary"># Facilities : 1 Modern Lift, All Modern Amenities & Semi Furnished.</p>
-                        <p className="text-secondary"> # Rental cars.</p>
+                        <p className="text-secondary"> # Orderal cars.</p>
                         <p className="text-secondary"> # Entrance fees to attractions.</p>                        <p className="text-secondary"> # Tickets for entry to events or attractions.</p>
                         
                     </Col>
