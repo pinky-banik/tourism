@@ -52,14 +52,14 @@ const AddSpot = () => {
             <div className="row">
                 <div className="col-md-2 col-sm-12">
                     <div className="sidebar">
-                        <div className="logo w-50 h-50">
-                            <Link to="/"><img className="h-50 w-50 img" src={logo} alt="logo" /></Link>
+                        <div className="logo">
+                            <Link to="/"><img className="h-75 w-75" src={logo} alt="logo" /></Link>
                         </div>
                         <div className="dashboard__link mt-5">
                         <p><Link className="link" to="bookings"><span><FontAwesomeIcon icon={faAddressBook} size="xs" /> Booking list</span></Link></p>
                             <p><Link className="link" to="addSpot"><span><FontAwesomeIcon icon={faPlus} size="xs" /> Add Tourist Spot</span></Link></p>
                             <p><Link className="link" to="myOrders"><span className="booking-link"><FontAwesomeIcon icon={faUser} size="xs" /> My  Orders</span></Link></p>
-                            <p><Link className="link" to="/"><span><FontAwesomeIcon icon={faHome} size="xs" /> My Orders</span></Link></p>
+                            <p><Link className="link" to="/"><span><FontAwesomeIcon icon={faHome} size="xs" /> Back to home</span></Link></p>
                         </div>
                     </div>
                 </div>
