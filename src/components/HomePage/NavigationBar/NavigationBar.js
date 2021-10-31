@@ -63,22 +63,20 @@ const NavigationBar = () => {
         )
     }
     return (
-        <Container>
-            <Navbar className="" collapseOnSelect expand="md" >
+            <div className="navbar">
+                <Navbar className="mx-3 " variant="dark" collapseOnSelect expand="md" >
                 <Navbar.Brand href=""><img  className ="w-50"style={{height:"60px"}} src={logo} alt=""/><span>Infinite Tourism</span></Navbar.Brand>
                 <Navbar.Toggle className="ml-auto" aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
                         <Nav.Link href="" onClick={() => history.push('/')}>Home</Nav.Link>
-                        {/* <Nav.Link href="" >About</Nav.Link> */}
-                        <Nav.Link href="" >Service</Nav.Link>
                         <Nav.Link   as={NavLink} to="/myOrders" href="" >My Orders</Nav.Link>
                         <Nav.Link as={NavLink} to="/manageBooking" href="" >Manage All Orders</Nav.Link>
                     </Nav>
                     {buttons}
                 </Navbar.Collapse>
             </Navbar>
-        </Container>
+            </div>
     );
 };
 

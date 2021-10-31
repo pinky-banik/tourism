@@ -52,8 +52,8 @@ const AddSpot = () => {
             <div className="row">
                 <div className="col-md-2 col-sm-12">
                     <div className="sidebar">
-                        <div className="logo">
-                            <Link to="/"><img  className="w-50" src={logo} alt="logo" /></Link>
+                        <div className="logo w-50 h-50">
+                            <Link to="/"><img className="h-50 w-50 img" src={logo} alt="logo" /></Link>
                         </div>
                         <div className="dashboard__link mt-5">
                             <p><Link className="link" to="bookings"><span><FontAwesomeIcon icon={faNotesMedical} size="xs" /> Booking list</span></Link></p>

@@ -15,11 +15,12 @@ const Header = () => {
                 backgroundPosition: "center center",
                 backgroundSize: "cover",
                 width: "100%",
+                height :"100%"
                 }}
             >
                 <Container>
                 <div
-                    className="img-fluid d-flex mt-5 py-5 justify-content-center align-items-center "
+                    className="img-fluid d-flex justify-content-center align-items-center "
                 >
                     <div className="text-center my-5 py-5">
                         <div>
