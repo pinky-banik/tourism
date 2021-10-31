@@ -2,10 +2,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/HomePage/Home/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ApartmentDetail from './components/HomePage/ApartmentDetail/ApartmentDetail';
+import SpotDetail from './components/HomePage/SpotDetail/SpotDetail';
 import Bookings from './components/Dashboard/Bookings/Bookings';
-import AddHouse from './components/Dashboard/AddHouse/AddHouse';
-import MyRent from './components/Dashboard/MyRent/MyRent';
+import AddSpot from './components/Dashboard/AddSpot/AddSpot';
+import MyOrders from './components/Dashboard/MyOrders/MyOrders';
 import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
@@ -32,11 +32,11 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <PrivateRoute path="/apartmentDetail/:id">
-              <ApartmentDetail />
+            <PrivateRoute path="/spotDetail/:id">
+              <SpotDetail />
             </PrivateRoute>
             <PrivateRoute path="/myOrders">
-            <MyRent></MyRent>
+            <MyOrders></MyOrders>
             </PrivateRoute>
             <PrivateRoute path="/manageBooking">
             <Bookings />
@@ -44,11 +44,11 @@ function App() {
             <Route path="/bookings">
             <Bookings />
             </Route>
-            <Route path="/addHouse">
-              <AddHouse />
+            <Route path="/AddSpot">
+              <AddSpot />
             </Route>
-            <Route path="/myRent">
-              <MyRent />
+            <Route path="/myOrders">
+              <MyOrders />
             </Route>
             <Route path="/login">
               <Login />

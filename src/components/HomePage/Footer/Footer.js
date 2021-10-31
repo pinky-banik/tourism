@@ -37,7 +37,7 @@ const Footer = () => {
                             <Col>
                                 <h4 className="mb-4">Quick Links</h4>
                                 <span>Quick Links</span> <br />
-                                <span>Rentals</span> <br />
+                                <span>Ordersals</span> <br />
                                 <span>Sales</span> <br />
                                 <span>Contact</span> <br />
                                 <span>Terms Conditons</span> <br />

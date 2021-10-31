@@ -1,5 +1,5 @@
 import React from 'react';
-import Apartments from '../Apartments/Apartments';
+import Spots from '../Spots/Spots';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import NavigationBar from '../NavigationBar/NavigationBar';
@@ -9,7 +9,7 @@ const Home = () => {
         <div >
             <NavigationBar></NavigationBar>
             <Header></Header>
-            <Apartments></Apartments>
+            <Spots></Spots>
             <Footer></Footer>
         </div>
     );

@@ -4,18 +4,18 @@ import logo from '../../../logos/Logo.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faHome, faNotesMedical } from '@fortawesome/free-solid-svg-icons'
-import './AddHouse.css';
+import './AddSpot.css';
 import { UserContext } from '../../../App';
 
-const AddHouse = () => {
+const AddSpot = () => {
     const [loggedInUser] = useContext(UserContext);
-    const [addApartment, setAddApartment] = useState({});
+    const [addSpot, setaddSpot] = useState({});
     const [file, setFile] = useState(null);
 
-    const handleAddHouse = e => {
-        const newApartmentInfo = { ...addApartment };
-        newApartmentInfo[e.target.name] = e.target.value;
-        setAddApartment(newApartmentInfo);
+    const handleAddSpot = e => {
+        const newSpotInfo = { ...addSpot };
+        newSpotInfo[e.target.name] = e.target.value;
+        setaddSpot(newSpotInfo);
     };
     
     const handleFileChange = (e) => {
@@ -27,13 +27,13 @@ const AddHouse = () => {
 
         const formData = new FormData()
         formData.append('file', file);
-        formData.append('title', addApartment.title);
-        formData.append('price', addApartment.price);
-        formData.append('location', addApartment.location);
-        formData.append('bedroom', addApartment.bedroom);
-        formData.append('bathroom', addApartment.bathroom);
+        formData.append('title', addSpot.title);
+        formData.append('price', addSpot.price);
+        formData.append('location', addSpot.location);
+        formData.append('bedroom', addSpot.bedroom);
+        formData.append('bathroom', addSpot.bathroom);
 
-        fetch('localhost:5000/addNewApartment', {
+        fetch('localhost:5000/addNewSpot', {
             method: 'POST',
             body: formData
         })
@@ -57,43 +57,43 @@ const AddHouse = () => {
                         </div>
                         <div className="dashboard__link mt-5">
                             <p><Link className="link" to="bookings"><span><FontAwesomeIcon icon={faNotesMedical} size="xs" /> Booking list</span></Link></p>
-                            <p><Link className="link" to="addHouse"><span className="booking-link"><FontAwesomeIcon icon={faPlus} size="xs" /> Add Rent House</span></Link></p>
-                            <p><Link className="link" to="myRent"><span><FontAwesomeIcon icon={faHome} size="xs" /> My Rent</span></Link></p>
+                            <p><Link className="link" to="AddSpot"><span className="booking-link"><FontAwesomeIcon icon={faPlus} size="xs" /> Add Orders House</span></Link></p>
+                            <p><Link className="link" to="myOrders"><span><FontAwesomeIcon icon={faHome} size="xs" /> My Orders</span></Link></p>
                             <p className="goHome"><Link className="link" to="/"><span><FontAwesomeIcon icon={faHome} size="xs" /> Back to Home</span></Link></p>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-10 col-sm-12">
                     <div className="sec__title d-flex">
-                        <h3 className="pl-3">Add Rent House</h3>
+                        <h3 className="pl-3">Add Orders House</h3>
                         <h5 className="ml-auto user__name">{loggedInUser.name}</h5>
                     </div>
                     <div className="dashboard__content">
-                        <Form className="addHouse">
+                        <Form className="AddSpot">
                             <Row>
                                 <Col>
                                     <Form.Label className="mt-1">Service Title</Form.Label>
-                                    <Form.Control onBlur={handleAddHouse} name="title" type="text" placeholder="Enter title" required />
+                                    <Form.Control onBlur={handleAddSpot} name="title" type="text" placeholder="Enter title" required />
                                 </Col>
                                 <Col>
                                     <Form.Label className="mt-1">Price</Form.Label>
-                                    <Form.Control onBlur={handleAddHouse} name="price" type="number" placeholder="Price" required />
+                                    <Form.Control onBlur={handleAddSpot} name="price" type="number" placeholder="Price" required />
                                 </Col>
                             </Row>
                             <Row>
                                 <Col>
                                     <Form.Label className="mt-1">Location</Form.Label>
-                                    <Form.Control onBlur={handleAddHouse} name="location" type="text" placeholder="Location" required />
+                                    <Form.Control onBlur={handleAddSpot} name="location" type="text" placeholder="Location" required />
                                 </Col>
                                 <Col>
                                     <Form.Label className="mt-1">No of Bedroom</Form.Label>
-                                    <Form.Control onBlur={handleAddHouse} name="bedroom" type="number" placeholder="Enter Quantity" required />
+                                    <Form.Control onBlur={handleAddSpot} name="bedroom" type="number" placeholder="Enter Quantity" required />
                                 </Col>
                             </Row>
                             <Row>
                                 <Col>
                                     <Form.Label className="mt-1">No of Bathroom</Form.Label>
-                                    <Form.Control onBlur={handleAddHouse} name="bathroom" type="number" placeholder="Enter Quantity" required />
+                                    <Form.Control onBlur={handleAddSpot} name="bathroom" type="number" placeholder="Enter Quantity" required />
                                 </Col>
                                 <Col>
                                     <Form.Label className="mt-1">Thumbnail</Form.Label>
@@ -111,4 +111,4 @@ const AddHouse = () => {
     );
 };
 
-export default AddHouse;
+export default AddSpot;

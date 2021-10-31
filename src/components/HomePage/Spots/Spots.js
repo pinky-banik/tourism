@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import './Apartments.css';
+import './Spots.css';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBath, faBed, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import loading from "../../../logos/loading.gif";
-const Apartments = () => {
-    const [apartmentData, setApartmentData] = useState([]);
+const Spots = () => {
+    const [spotData, setSpotData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/apartments')
+        fetch('http://localhost:5000/spots')
             .then(res => res.json())
-            .then(data => setApartmentData(data))
+            .then(data => setSpotData(data))
     }, []);
     const history = useHistory();
     return (
         <Container>
-            <h5 className="greenText text-center mt-5">House Rent</h5>
-            <h2 className="darkGreenText text-center font-weight-bold">Discover the largest Rent <br /> available today</h2>
+            <h5 className="greenText text-center mt-5">House Orders</h5>
+            <h2 className="darkGreenText text-center font-weight-bold">Discover the largest Orders <br /> available today</h2>
             
             {
-                (apartmentData.length === 0) ?
+                (spotData.length === 0) ?
                     <div class="d-flex justify-content-center">
                         <img style={{width: '200px', height: '150px', marginTop: '50px'}} src={loading} alt="loading"/> 
                     </div> :
             <div>
             <Row className="mt-5">
                 {
-                    apartmentData.map(data =>
+                    spotData.map(data =>
                         <Col key={data._id} sm={4}>
                             <Card className="bg-white mb-4 card-style">
                                 <Card.Img src={data.img} alt="image" />
@@ -46,7 +46,7 @@ const Apartments = () => {
                                             <h2 className="font-weight-bold greenText">${data.price}</h2>
                                         </Col>
                                         <Col className="text-right">
-                                            <button onClick={() => history.push(`/apartmentDetail/${data._id}`)} className="btn greenBtn">View Details</button>
+                                            <button onClick={() => history.push(`/spotDetail/${data._id}`)} className="btn greenBtn">View Details</button>
                                         </Col>
                                     </Row>
                                 </Card.Body>
@@ -61,4 +61,4 @@ const Apartments = () => {
     );
 };
 
-export default Apartments;
+export default Spots;

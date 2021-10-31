@@ -1,13 +1,13 @@
-.apartmentWrapper{
+.spotWrapper{
     height: 300px;
     position: relative;
 }
-.apartmentInner{
+.spotInner{
     position: relative;
     z-index: 555;
     color: white;
 }
-.apartmentWrapper:before{
+.spotWrapper:before{
     content: ' ';
     display: block;
     position: absolute;
@@ -19,7 +19,7 @@
     background-position: center;
     background-size: cover;
 }
-.apartmentOverlay {
+.spotOverlay {
     position: absolute;
     background: #000000c9;
     width: 100%;

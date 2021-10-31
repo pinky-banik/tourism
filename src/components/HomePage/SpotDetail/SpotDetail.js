@@ -1,28 +1,28 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import NavigationBar from '../NavigationBar/NavigationBar';
-import './ApartmentDetail.css';
+import './SpotDetail.css';
 import house from '../../../images/house.png';
 import { UserContext } from '../../../App';
 import { useParams } from 'react-router-dom';
 import imageDatas from '../../../fakeData/imageDatas';
 
 
-const ApartmentDetail = () => {
+const SpotDetail = () => {
     const insideHouse = imageDatas;
 
     const [loggedInUser] = useContext(UserContext);
 
-    const [apartmentData, setApartmentData] = useState([]);
+    const [spotData, setSpotData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/apartments')
+        fetch('http://localhost:5000/spots')
             .then(res => res.json())
-            .then(data => setApartmentData(data))
+            .then(data => setSpotData(data))
     }, []);
 
     const { id } = useParams();
-    const apartment = apartmentData.find(data => data._id === id) || {};
-    console.log(apartment);
+    const spot = spotData.find(data => data._id === id) || {};
+    console.log(spot);
     console.log(id);
 
     const [bookingInfo, setBookingInfo] = useState({});
@@ -38,8 +38,8 @@ const ApartmentDetail = () => {
         formData.append('number', bookingInfo.number);
         formData.append('email', bookingInfo.email || loggedInUser.email);
         formData.append('message', bookingInfo.message);
-        formData.append('house', apartment.title);
-        formData.append('price', apartment.price);
+        formData.append('house', spot.title);
+        formData.append('price', spot.price);
         formData.append('status', bookingInfo.status);
 
         fetch('http://localhost:5000/addBooking', {
@@ -56,11 +56,11 @@ const ApartmentDetail = () => {
     return (
         <div>
             <NavigationBar></NavigationBar>
-            <div className="apartmentWrapper text-center">
-                <div className="apartmentInner pt-5 ">
-                    <h1 className="pt-5 mt-3 font-weight-bold">Apartment</h1>
+            <div className="spotWrapper text-center">
+                <div className="spotInner pt-5 ">
+                    <h1 className="pt-5 mt-3 font-weight-bold">Spot</h1>
                 </div>
-                <div className="apartmentOverlay"></div>
+                <div className="spotOverlay"></div>
             </div>
             <Container className="mt-5">
                 <Row>
@@ -79,16 +79,16 @@ const ApartmentDetail = () => {
                         </div>
                         <Row className="my-3">
                             <Col>
-                                <h2 className="font-weight-bold darkGreenText">{apartment.title}</h2>
+                                <h2 className="font-weight-bold darkGreenText">{spot.title}</h2>
                             </Col>
                             <Col>
-                                <h2 className="font-weight-bold greenText text-right">${apartment.price}</h2>
+                                <h2 className="font-weight-bold greenText text-right">${spot.price}</h2>
                             </Col>
                         </Row>
-                        <p className="text-secondary">3000 sq-ft., {apartment.bedroom} Bedroom, Semi-furnished, Luxurious, South facing Apartment for Rent in Rangs Malancha, Melbourne.</p>
+                        <p className="text-secondary">3000 sq-ft., {spot.bedroom} Bedroom, Semi-furnished, Luxurious, South facing Spot for Orders in Rangs Malancha, Melbourne.</p>
                         <h3 className="font-weight-bold darkGreenText">Price Detail -</h3>
                         <p className="text-secondary">
-                            Rent/Month: $550 (negotiable) <br />
+                            Orders/Month: $550 (negotiable) <br />
                             Service Charge : 8,000/= Tk per month, subject to change <br />
                             Security Deposit : 3 month’s rent <br />
                             Flat Release Policy : 3 months earlier notice required
@@ -126,4 +126,4 @@ const ApartmentDetail = () => {
     );
 };
 
-export default ApartmentDetail;
+export default SpotDetail;
