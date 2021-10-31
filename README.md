@@ -6,8 +6,6 @@ A responsive Travel booking Service web application tourists.
 
 * Client have ability to request booking for Tourist Spot, check status of requested booking from client dashboard.
 
-*Both admin can update the client requested booking status from pending to on going to done, add new apartment/house with image, all the apartment details and add new admin.
-
 * Sign in is required to request booking for Spots or to view client dashboard with services status.
 
 * Logged in client will see a button named "Dashboard", where they can view the booking list they requested.
@@ -20,8 +18,6 @@ A responsive Travel booking Service web application tourists.
    * React Context API
    * React Hook
    * Firebase Hosting
-   * Session Storage
-   * React Spinners
    * Bootstrap
    * FontAwesome
 

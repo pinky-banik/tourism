@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import logo from '../../../logos/Logo.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faHome, faNotesMedical } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faHome, faUser, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../../../App';
 
 
@@ -24,10 +24,10 @@ const MyOrder = () => {
                             <Link to="/"><img src={logo} alt="logo" /></Link>
                         </div>
                         <div className="dashboard__link mt-5">
-                            <p><Link className="link" to="bookings"><span><FontAwesomeIcon icon={faNotesMedical} size="xs" /> Booking list</span></Link></p>
+                        <p><Link className="link" to="bookings"><span><FontAwesomeIcon icon={faAddressBook} size="xs" /> Booking list</span></Link></p>
                             <p><Link className="link" to="addSpot"><span><FontAwesomeIcon icon={faPlus} size="xs" /> Add  Tourist Spot</span></Link></p>
-                            <p><Link className="link" to="myOrders"><span className="booking-link"><FontAwesomeIcon icon={faHome} size="xs" /> My  Orders</span></Link></p>
-                            <p className="goHome"><Link className="link" to="/"><span><FontAwesomeIcon icon={faHome} size="xs" /> Back to Home</span></Link></p>
+                            <p><Link className="link" to="myOrders"><span className="booking-link"><FontAwesomeIcon icon={faUser} size="xs" /> My  Orders</span></Link></p>
+                            <p><Link className="link" to="/"><span><FontAwesomeIcon icon={faHome} size="xs" /> My Orders</span></Link></p>
                         </div>
                     </div>
                 </div>

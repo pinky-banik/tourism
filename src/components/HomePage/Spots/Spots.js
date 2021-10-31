@@ -3,7 +3,7 @@ import './Spots.css';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBath, faBed, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faBath, faStar, faHome ,  faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import loading from "../../../logos/loading.gif";
 const Spots = () => {
     const [spotData, setSpotData] = useState([]);
@@ -30,20 +30,22 @@ const Spots = () => {
                         <Col key={data._id} sm={4}>
                             <Card className="bg-white mb-4 card-style">
                                 <Card.Img src={data.img} alt="image" />
+                                
                                 <Card.Body>
                                     <Card.Title className="font-weight-bold indigoText ">{data.title}</Card.Title>
                                     <Card.Text className="text-secondary"><FontAwesomeIcon icon={faMapMarkerAlt} /> {data.places}</Card.Text>
                                     <Row>
                                         <Col>
-                                            <Card.Text className="text-secondary"><FontAwesomeIcon icon={faBed} /> {data.duration} Bedrooms</Card.Text>
+                                            <Card.Text className="text-secondary"><FontAwesomeIcon icon={faStar} /> {data.rating} </Card.Text>
                                         </Col>
                                         <Col className="text-right">
-                                            <Card.Text className="text-secondary"><FontAwesomeIcon icon={faBath} /> {data.bathroom} Bathrooms</Card.Text>
+                                            <Card.Text className="text-secondary"><FontAwesomeIcon icon={faHome} /> {data.duration} </Card.Text>
                                         </Col>
                                     </Row>
                                     <Row className="mt-4">
                                         <Col>
-                                            <h2 className="font-weight-bold indigoText">${data.price}</h2>
+                                        
+                                            <h2 className="font-weight-bold indigoText">{data.price}</h2>
                                         </Col>
                                         <Col className="text-right">
                                             <button onClick={() => history.push(`/spotDetail/${data._id}`)} className="btn indigoBtn">View Details</button>
