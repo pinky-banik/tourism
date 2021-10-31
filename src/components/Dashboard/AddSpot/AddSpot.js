@@ -30,8 +30,8 @@ const AddSpot = () => {
         formData.append('title', addSpot.title);
         formData.append('price', addSpot.price);
         formData.append('places', addSpot.places);
-        formData.append('rating', addSpot.rating);
-        formData.append('duration', addSpot.duration);
+        formData.append('rating', addSpot.duration);
+        formData.append('duration', addSpot.rating);
 
         fetch('localhost:5000/addNewSpot', {
             method: 'POST',
@@ -57,7 +57,7 @@ const AddSpot = () => {
                         </div>
                         <div className="dashboard__link mt-5">
                         <p><Link className="link" to="bookings"><span><FontAwesomeIcon icon={faAddressBook} size="xs" /> Booking list</span></Link></p>
-                            <p><Link className="link" to="addSpot"><span><FontAwesomeIcon icon={faPlus} size="xs" /> Add  Tourist Spot</span></Link></p>
+                            <p><Link className="link" to="addSpot"><span><FontAwesomeIcon icon={faPlus} size="xs" /> Add Tourist Spot</span></Link></p>
                             <p><Link className="link" to="myOrders"><span className="booking-link"><FontAwesomeIcon icon={faUser} size="xs" /> My  Orders</span></Link></p>
                             <p><Link className="link" to="/"><span><FontAwesomeIcon icon={faHome} size="xs" /> My Orders</span></Link></p>
                         </div>
@@ -72,7 +72,7 @@ const AddSpot = () => {
                         <Form className="AddSpot">
                             <Row>
                                 <Col>
-                                    <Form.Label className="mt-1">Service Title</Form.Label>
+                                    <Form.Label className="mt-1">Title</Form.Label>
                                     <Form.Control onBlur={handleAddSpot} name="title" type="text" placeholder="Enter title" required />
                                 </Col>
                                 <Col>
@@ -82,17 +82,17 @@ const AddSpot = () => {
                             </Row>
                             <Row>
                                 <Col>
-                                    <Form.Label className="mt-1">Location</Form.Label>
+                                    <Form.Label className="mt-1">Places</Form.Label>
                                     <Form.Control onBlur={handleAddSpot} name="location" type="text" placeholder="Location" required />
                                 </Col>
                                 <Col>
-                                    <Form.Label className="mt-1">No of Bedroom</Form.Label>
+                                    <Form.Label className="mt-1">Duration</Form.Label>
                                     <Form.Control onBlur={handleAddSpot} name="bedroom" type="number" placeholder="Enter Quantity" required />
                                 </Col>
                             </Row>
                             <Row>
                                 <Col>
-                                    <Form.Label className="mt-1">No of Bathroom</Form.Label>
+                                    <Form.Label className="mt-1">Rating</Form.Label>
                                     <Form.Control onBlur={handleAddSpot} name="bathroom" type="number" placeholder="Enter Quantity" required />
                                 </Col>
                                 <Col>
